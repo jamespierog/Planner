@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-<?xml version = "1.0" encoding = "UTF-8" ?>
-<project>
-    <task>
-         <name>thing</name>
-         <description>this is a thing</description>
-         <estDuration>12</estDuration>
-         <subtask>
-                <name>thing</name>
-                <description>this is a thing</description>
-                <estDuration>12</estDuration>
-         </subtask>
-    </task>
-</project>
 
-
-<board>
-    <section>
-        <task>
-        </task>
-    </section>
-</board>
-=======
-package com.example.lib;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.time.Duration;
-import java.time.LocalDateTime;
->>>>>>> 8ca0af029493a1e34568756f6e0eb78c897f47e2
 
 public class Planner {
     String name;
