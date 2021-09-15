@@ -8,7 +8,8 @@ public class Task {
     String name;
     String description;
     Duration estimatedDuration;
-    LocalDateTime deadline;
+//    LocalDateTime deadline;
+    Set<Task> subtask = new HashSet<Task>();
 
     public Task(String name, String description, Duration estimatedDuration, LocalDateTime deadline) {
         this.name = name;
@@ -17,10 +18,13 @@ public class Task {
         this.deadline = deadline;
     }
 
-    Hashtable<Integer, Task> ht = Hashtable<>();
+    public void addSubtask(Task t){
+        subtask.add(t)
+    }
 
-    ht.put(1, Task(...));
-
+    public void removeSubtask(Task t){
+        subtask.remove(t)
+    }
 
     public String getName() {
         return name;
