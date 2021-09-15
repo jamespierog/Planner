@@ -17,6 +17,11 @@ public class Task {
         this.deadline = deadline;
     }
 
+    Hashtable<Integer, Task> ht = Hashtable<>();
+
+    ht.put(1, Task(...));
+
+
     public String getName() {
         return name;
     }
