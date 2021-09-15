@@ -1,50 +1,37 @@
 
-
 public class Planner {
-    String name;
-    String description;
-    LocalDateTime deadline;
+    String project;
 
-    public Planner(String name, String description, LocalDateTime deadline) {
-        this.name = name;
-        this.description = description;
-        this.deadline = deadline;
+    public Planner(String project) {
+        this.project = project;
     }
 
-    public String getName() {
-        return name;
+    public String getProject() {
+        return project;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public LocalDateTime getDeadline() {
-        return deadline;
-    }
 
     public String toString() {
-        return  "Project: " + name + ", description: " + description + ", deadline: " + deadline + '.';
+        return  "Project: " + name ;
     }
 
     // Function to convert project object to XML
     public String plannerToXML(){
         return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
-                + "<project>" + "\n"
+                + "<planner>" + "\n"
                 + "    <name>" + getName() + "</name>" + "\n"
                 + "    <description>" + getDescription() + "</description>" + "\n"
                 + "    <deadline>" + getDeadline() + "</deadline>" + "\n"
-                + "</project>";
+                + "</planner>";
     }
 
     public static void main(String[] args) throws IOException {
-        //Sample project
-        Project p1 = new Planner("Project 1", "Project 1 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
-//        System.out.println(t1.toString());
+        //Sample Planner
+        Planner p1 = new Planner("Planner 1", "Planner 1 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
 
         // Turn Project object to xml file
-        String xmlStr = t1.projectToXML();
-        java.io.FileWriter fw = new FileWriter("project.xml");
+        String xmlStr = t1.plannerToXML();
+        java.io.FileWriter fw = new FileWriter("planner.xml");
         fw.write(xmlStr);
         fw.close();
     }
