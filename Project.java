@@ -4,5 +4,4 @@ public class Project {
     String name ;
     String description;
     LocalDateTime deadline;
-    // A comment for test
 }
