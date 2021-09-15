@@ -8,6 +8,7 @@ public class Project {
     String name;
     String description;
     LocalDateTime deadline;
+<<<<<<< HEAD
 
     public Project(String name, String description, LocalDateTime deadline) {
         this.name = name;
@@ -53,3 +54,6 @@ public class Project {
         fw.close();
     }
 }
+=======
+}
+>>>>>>> 6cc3cc5920dd910472394d0fbe7bd72b39a550c0
