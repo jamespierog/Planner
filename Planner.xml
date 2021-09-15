@@ -15,4 +15,13 @@
             <duration>PT5H</duration>
         </subtask>
     </task>
+
+    <Board>
+        <name> Board 1 </name>
+        <Section>
+            <name> Section 1 </name>
+            <task> Task 1 </name>
+        </Section>
+    </Board>
+
 </Planner>
