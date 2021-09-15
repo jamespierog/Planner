@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Planner>
+    <task>
+        <name>Task 1</name>
+        <description>Task 1 description</description>
+        <duration>PT5H</duration>
+        <subtask>
+            <name>Subtask 1</name>
+            <description>Sub Task 1 description</description>
+            <duration>PT5H</duration>
+        </subtask>
+        <subtask>
+            <name>Subtask 2</name>
+            <description>Sub Task 2 description</description>
+            <duration>PT5H</duration>
+        </subtask>
+    </task>
+</Planner>
