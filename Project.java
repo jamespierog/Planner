@@ -8,7 +8,6 @@ public class Project {
     String name;
     String description;
     LocalDateTime deadline;
-<<<<<<< HEAD
 
     public Project(String name, String description, LocalDateTime deadline) {
         this.name = name;
@@ -29,17 +28,17 @@ public class Project {
     }
 
     public String toString() {
-        return  "Task: " + name + ", description: " + description + ", deadline: " + deadline + '.';
+        return  "Project: " + name + ", description: " + description + ", deadline: " + deadline + '.';
     }
 
     // Function to convert project object to XML
     public String projectToXML(){
         return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
-                + "<task>" + "\n"
+                + "<project>" + "\n"
                 + "    <name>" + getName() + "</name>" + "\n"
                 + "    <description>" + getDescription() + "</description>" + "\n"
                 + "    <deadline>" + getDeadline() + "</deadline>" + "\n"
-                + "</task>";
+                + "</project>";
     }
 
     public static void main(String[] args) throws IOException {
@@ -54,6 +53,3 @@ public class Project {
         fw.close();
     }
 }
-=======
-}
->>>>>>> 6cc3cc5920dd910472394d0fbe7bd72b39a550c0
