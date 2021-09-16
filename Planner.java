@@ -75,7 +75,7 @@ public class Planner {
         public String plannerToXML(){
             return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
                     + "<planner>" + "\n"
-                    + "    <project>" + getProject() + "</project>" + "\n"
+                    + "    <project>" + getProjects() + "</project>" + "\n"
                     + "</planner>";
         }
 
