@@ -24,7 +24,6 @@ public class Project implements IProject{
         return description;
     }
 
-
     public LocalDateTime getDeadline() {
         return deadline;
     }
@@ -61,24 +60,24 @@ public class Project implements IProject{
     }
 
     // Function to convert project object to XML
-    public String projectToXML(){
-        return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
-                + "<project>" + "\n"
-                + "    <name>" + getName() + "</name>" + "\n"
-                + "    <description>" + getDescription() + "</description>" + "\n"
-                + "    <deadline>" + getDeadline() + "</deadline>" + "\n"
-                + "</project>";
-    }
-
-    public static void main(String[] args) throws IOException {
-        //Sample project
-        Project p1 = new Project("Project 1", "Project 1 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
-//        System.out.println(t1.toString());
-
-        // Turn Project object to xml file
-        String xmlStr = t1.projectToXML();
-        java.io.FileWriter fw = new FileWriter("project.xml");
-        fw.write(xmlStr);
-        fw.close();
-    }
+//    public String projectToXML(){
+//        return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
+//                + "<project>" + "\n"
+//                + "    <name>" + getName() + "</name>" + "\n"
+//                + "    <description>" + getDescription() + "</description>" + "\n"
+//                + "    <deadline>" + getDeadline() + "</deadline>" + "\n"
+//                + "</project>";
+//    }
+//
+//    public static void main(String[] args) throws IOException {
+//        //Sample project
+//        Project p1 = new Project("Project 1", "Project 1 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
+////        System.out.println(t1.toString());
+//
+//        // Turn Project object to xml file
+//        String xmlStr = t1.projectToXML();
+//        java.io.FileWriter fw = new FileWriter("project.xml");
+//        fw.write(xmlStr);
+//        fw.close();
+//    }
 }

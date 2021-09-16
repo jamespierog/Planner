@@ -37,19 +37,19 @@ public class Board {
     }
 
 
-    public String toString() {
-        return  "Board: " + name + '.';
-    }
+//    public String toString() {
+//        return  "Board: " + name + '.';
+//    }
 
-    // Function to convert project object to XML
-    public String projectToXML(){
-        return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
-                + "<board>" + "\n"
-                + "    <name>" + getName() + "</name>" + "\n"
-                + "</board>";
-    }
-
-    public static void main(String[] args) {
-
-    }
+//    // Function to convert project object to XML
+//    public String projectToXML(){
+//        return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
+//                + "<board>" + "\n"
+//                + "    <name>" + getName() + "</name>" + "\n"
+//                + "</board>";
+//    }
+//
+//    public static void main(String[] args) {
+//
+//    }
 }

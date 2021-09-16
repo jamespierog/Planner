@@ -63,21 +63,21 @@ public class Planner {
         }
 
         // Function to convert project object to XML
-        public String plannerToXML(){
-            return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
-                    + "<planner>" + "\n"
-                    + "    <project>" + getProjects() + "</project>" + "\n"
-                    + "</planner>";
-        }
-
-        public static void main(String[] args) throws IOException {
-            //Sample Planner
-            Planner p1 = new Planner();
-
-            // Turn Project object to xml file
-            String xmlStr = p1.plannerToXML();
-            java.io.FileWriter fw = new FileWriter("planner.xml");
-            fw.write(xmlStr);
-            fw.close();
-        }
+//        public String plannerToXML(){
+//            return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
+//                    + "<planner>" + "\n"
+//                    + "    <project>" + getProjects() + "</project>" + "\n"
+//                    + "</planner>";
+//        }
+//
+//        public static void main(String[] args) throws IOException {
+//            //Sample Planner
+//            Planner p1 = new Planner();
+//
+//            // Turn Project object to xml file
+//            String xmlStr = p1.plannerToXML();
+//            java.io.FileWriter fw = new FileWriter("planner.xml");
+//            fw.write(xmlStr);
+//            fw.close();
+//        }
     }
