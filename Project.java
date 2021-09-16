@@ -8,7 +8,7 @@ public class Project implements IProject{
     String name;
     String description;
     LocalDateTime deadline;
-    Set<Task> task = new TreeSet<Task>();
+    Set<Task> tasks = new TreeSet<Task>();
 
     public Project(String name, String description, LocalDateTime deadline) {
         this.name = name;
@@ -39,14 +39,14 @@ public class Project implements IProject{
                 throw new AlreadyExistsException("This task already exists!")
             }
         }
-        task.add(t)
+        tasks.add(t)
     }
 
     public void removeTask(Task t) throws NotFoundException{
         boolean isExist = false;
         for (Task s: tasks){
             if(s.getName() == t.getName() && s.getDescription() == t.getDescription() && s.getExpectedDuration() == t.getExpectedDuration()){
-                task.remove(t);
+                tasks.remove(t);
                 isExist = true;
             }
         }
