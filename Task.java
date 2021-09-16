@@ -4,18 +4,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-interface ITask {
-    String
-            String
-    Duration
-    getName();
-    getDescription() ;
-    getExpectedDuration();
-    Iterable<ITask> getSubTasks() ;
-    void addSubTask(ITask t) throws AlreadyExistsException; void removeSubTask(ITask t) throws NotFoundException;
-}
-
-public class Task {
+public class Task implements ITask{
     String name;
     String description;
     Duration estimatedDuration;
@@ -53,10 +42,6 @@ public class Task {
         if(isExist == false){
             throw new NotFoundException("This subtask does not exist, so you cannot remove it!");
         }
-    }
-
-    public void removeSubtask(Task t){
-        subtask.remove(t)
     }
 
     public String getName() {
