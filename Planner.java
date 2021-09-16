@@ -62,15 +62,6 @@ public class Planner {
         }
         }
 
-        // void addBoard(IBoard b) throws AlreadyExistsException;
-        // void addProject(IProject p) throws AlreadyExistsException; Iterable<IBoard> getBoards();
-        // Iterable<IProject> getProjects();
-        // public String writeXMLData();
-    /*
-        input: raw data from an XML file.
-    */
-        // public void readXMLData(String data);
-
         // Function to convert project object to XML
         public String plannerToXML(){
             return "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>" + "\n"
