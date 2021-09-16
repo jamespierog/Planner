@@ -20,7 +20,7 @@ public class Board {
                 throw new AlreadyExistsException("This sections already exists!")
             }
         }
-        sections.add(t)
+        sections.add(t);
     }
 
     public void removeSection(Section t) throws NotFoundException{
