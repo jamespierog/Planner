@@ -81,7 +81,7 @@ public class Planner {
 
         public static void main(String[] args) throws IOException {
             //Sample Planner
-            Planner p1 = new Planner("Planner 1");
+            Planner p1 = new Planner();
 
             // Turn Project object to xml file
             String xmlStr = p1.plannerToXML();
