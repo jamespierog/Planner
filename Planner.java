@@ -24,14 +24,14 @@ public class Planner {
                 throw new AlreadyExistsException("This project already exists!")
             }
         }
-        project.add(p);
+        projects.add(p);
     }
 
     public void removeProject(Project p){
         boolean isExist = false;
         for (Project s: projects){
             if(s.getName() == p.getName() && s.getDescription() == p.getDescription() && s.getDeadline() == p.getDeadline()){
-                project.remove(t);
+                projects.remove(t);
                 isExist = true;
             }
         }
@@ -46,14 +46,14 @@ public class Planner {
                 throw new AlreadyExistsException("This board already exists!")
             }
         }
-        board.add(b);
+        boards.add(b);
     }
 
     public void removeBoard(Project b){
         boolean isExist = false;
         for (Board s: boards){
             if(s.getName() == b.getName()){
-                board.remove(t);
+                boards.remove(b);
                 isExist = true;
             }
         }
