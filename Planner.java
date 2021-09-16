@@ -29,7 +29,7 @@ public class Planner {
     /*
         input: raw data from an XML file.
     */
-    public void readXMLData(String data);
+    // public void readXMLData(String data);
 
     // Function to convert project object to XML
     public String plannerToXML(){
