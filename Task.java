@@ -1,14 +1,14 @@
-package com.example.lib;
+//package com.example.lib;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class Task {
+public class Task implements ITask{
     String name;
     String description;
     Duration estimatedDuration;
-//    LocalDateTime deadline;
+    LocalDateTime deadline;
     Set<Task> subtask = new HashSet<Task>();
 
     public Task(String name, String description, Duration estimatedDuration, LocalDateTime deadline) {
@@ -18,12 +18,30 @@ public class Task {
         this.deadline = deadline;
     }
 
-    public void addSubtask(Task t){
+    public Iterable<Task> getSubTasks(){
+        return subtasks;
+    }
+
+    public void addSubtask(Task t) throws AlreadyExistsException{
+        for(Task s: subtasks){
+            if(s.getName() == t.getName() && s.getDescription() == t.getDescription() && s.getExpectedDuration() == t.getExpectedDuration()){
+                throw new AlreadyExistsException("This subtask already exists!")
+            }
+        }
         subtask.add(t)
     }
 
-    public void removeSubtask(Task t){
-        subtask.remove(t)
+    public void removeSubTask(Task t) throws NotFoundException{
+        boolean isExist = false;
+        for (Task s: subtasks){
+            if(s.getName() == t.getName() && s.getDescription() == t.getDescription() && s.getExpectedDuration() == t.getExpectedDuration()){
+                subtasks.remove(t);
+                isExist = true;
+            }
+        }
+        if(isExist == false){
+            throw new NotFoundException("This subtask does not exist, so you cannot remove it!");
+        }
     }
 
     public String getName() {
@@ -60,12 +78,19 @@ public class Task {
     public static void main(String[] args) throws IOException {
         //Sample task
         Task t1 = new Task("Task 1", "Task 1 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
+        Task t2 = new Task("Task 2", "Task 2 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
+
 //        System.out.println(t1.toString());
 
+        // Adding subtask
+        t1.addSubtask(t2);
+        System.out.println(t2);
+        System.out.println(t1.subtask);
+
         // Turn Task object to xml file
-        String xmlStr = t1.taskToXML();
-        java.io.FileWriter fw = new FileWriter("task.xml");
-        fw.write(xmlStr);
-        fw.close();
+//        String xmlStr = t1.taskToXML();
+//        java.io.FileWriter fw = new FileWriter("task.xml");
+//        fw.write(xmlStr);
+//        fw.close();
     }
 }

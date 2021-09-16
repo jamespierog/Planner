@@ -4,10 +4,11 @@ import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class Project {
+public class Project implements IProject{
     String name;
     String description;
     LocalDateTime deadline;
+    Set<Task> tasks = new TreeSet<Task>();
 
     public Project(String name, String description, LocalDateTime deadline) {
         this.name = name;
@@ -23,9 +24,37 @@ public class Project {
         return description;
     }
 
+
     public LocalDateTime getDeadline() {
         return deadline;
     }
+
+    public Iteratable<Task> getTasks(){
+        return tasks;
+    }
+
+    public void addTask(Task t) throws AlreadyExistsException{
+        for(Task s: tasks){
+            if(s.getName() == t.getName() && s.getDescription() == t.getDescription() && s.getExpectedDuration() == t.getExpectedDuration()){
+                throw new AlreadyExistsException("This task already exists!")
+            }
+        }
+        tasks.add(t)
+    }
+
+    public void removeTask(Task t) throws NotFoundException{
+        boolean isExist = false;
+        for (Task s: tasks){
+            if(s.getName() == t.getName() && s.getDescription() == t.getDescription() && s.getExpectedDuration() == t.getExpectedDuration()){
+                tasks.remove(t);
+                isExist = true;
+            }
+        }
+        if(isExist == false){
+            throw new NotFoundException("This subtask does not exist, so you cannot remove it!");
+        }
+    }
+
 
     public String toString() {
         return  "Project: " + name + ", description: " + description + ", deadline: " + deadline + '.';
