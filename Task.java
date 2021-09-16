@@ -1,4 +1,4 @@
-package com.example.lib;
+//package com.example.lib;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
@@ -8,7 +8,7 @@ public class Task {
     String name;
     String description;
     Duration estimatedDuration;
-//    LocalDateTime deadline;
+    LocalDateTime deadline;
     Set<Task> subtask = new HashSet<Task>();
 
     public Task(String name, String description, Duration estimatedDuration, LocalDateTime deadline) {
@@ -60,12 +60,19 @@ public class Task {
     public static void main(String[] args) throws IOException {
         //Sample task
         Task t1 = new Task("Task 1", "Task 1 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
+        Task t2 = new Task("Task 2", "Task 2 description", Duration.ofHours(5), LocalDateTime.of(2000, 8, 31, 7, 30));
+
 //        System.out.println(t1.toString());
 
+        // Adding subtask
+        t1.addSubtask(t2);
+        System.out.println(t2);
+        System.out.println(t1.subtask);
+
         // Turn Task object to xml file
-        String xmlStr = t1.taskToXML();
-        java.io.FileWriter fw = new FileWriter("task.xml");
-        fw.write(xmlStr);
-        fw.close();
+//        String xmlStr = t1.taskToXML();
+//        java.io.FileWriter fw = new FileWriter("task.xml");
+//        fw.write(xmlStr);
+//        fw.close();
     }
 }
