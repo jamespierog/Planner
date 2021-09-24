@@ -1,3 +1,5 @@
+package com.example.lib;
+
 public interface ISection {
     String            getName();
     Iterable<Task>    getTasks() ;

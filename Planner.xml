@@ -1,27 +1,44 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
-<Planner>
-    <task>
-        <name>Task 1</name>
-        <description>Task 1 description</description>
-        <duration>PT5H</duration>
-        <subtask>
-            <name>Subtask 1</name>
-            <description>Sub Task 1 description</description>
+<planner>
+    <project>
+        <name>YSC3232</name>
+        <task>
+            <name>Task 1</name>
+            <description>Task 1 description</description>
             <duration>PT5H</duration>
-        </subtask>
-        <subtask>
-            <name>Subtask 2</name>
-            <description>Sub Task 2 description</description>
-            <duration>PT5H</duration>
-        </subtask>
-    </task>
-
-    <Board>
-        <name> Board 1 </name>
-        <Section>
-            <name> Section 1 </name>
-            <task> Task 1 </name>
-        </Section>
-    </Board>
-
-</Planner>
+        </task>
+        <task>
+            <name>Task 2</name>
+            <description>Task 2 description</description>
+            <duration>PT3H</duration>
+        </task>
+        <task>
+            <name>Task 3</name>
+            <description>Task 3 description</description>
+            <duration>PT2H</duration>
+        </task>
+    </project>
+    <board>
+        <section>
+            <name>TODO</name>
+            <task>
+                <name>Task 1</name>
+                <description>Task 1 description</description>
+                <duration>PT5H</duration>
+            </task>
+            <task>
+                <name>Task 2</name>
+                <description>Task 2 description</description>
+                <duration>PT3H</duration>
+            </task>
+        </section>
+        <section>
+            <name>Done</name>
+            <task>
+                <name>Task 3</name>
+                <description>Task 3 description</description>
+                <duration>PT2H</duration>
+            </task>
+        </section>
+    </board>
+</planner>

@@ -1,3 +1,5 @@
+package com.example.lib;
+
 public interface IProject {
     String            getName();
     Iterable<Task>    getTasks() ;

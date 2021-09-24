@@ -1,10 +1,10 @@
+package com.example.lib;
 import java.time.Duration;
 
-interface ITask {
-
+public interface ITask {
     String         getName();
     String         getDescription() ;
-    Duration       getExpectedDuration();
+    Duration       getEstimatedDuration();
 
     Iterable<Task> getSubTasks() ;
     void           addSubTask(Task t) throws AlreadyExistsException;
